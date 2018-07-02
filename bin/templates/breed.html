@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Breed</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" 
+          href="../../../css/breed.css" th:href="@{/css/breed.css}" />
+	
+	
+</head>
+
+<body>
+<header><h1>All About The</h1></header>
+<ul>
+	  <li th:each="breed: ${breed}"> 	    
+	   	 	<span th:text="${breed.title}"></span>
+	 </li>
+</ul>
+	
+			 
+			 <img th:src="|/images/${breed.imgUrl}" />
+			 <img th:src="|/images/${breed.imgUrl3}" />
+
+<article th:text="${breed.descript}"></article>
+
+	<aside><img th:src="|/images/${breed.imgUrl2}" /> </aside>
+	
+
+<div>
+	<p><a th:href="@{/disciplines}">Back to list of disciplines</a></p>
+	<p><a th:href="@{/breeds}">Back to list of breeds</a></p>
+</div>
+
+<footer> <small>Copyright www.bridleplates.com LLC 2018</small> </footer>
+	
+</body>
+</html> 

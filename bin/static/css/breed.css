@@ -1,0 +1,65 @@
+
+*
+{	box-sizing: border-box;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Helvetica';
+   padding: 1px;
+   background-image: url("../images/Stellainpasture2.jpg");
+   background-repeat: no-repeat;
+   background-size: 100%;
+   font-size: 14px;
+   margin:1px 0px 0px 25px; /* top right left right */
+   
+}
+header {
+	
+	padding-top: 1px;
+}
+h1 {
+	font-family: 'Helvetica';
+	font-size: 60px;
+	padding-top: 1px;
+	margin: 0px 0px 0px 0px; 
+	color: #135A11;
+	
+}
+div {
+	margin: 180px 0px -100px 0px; 
+	font-family: 'Helvetica';
+	font-size: 20px;
+	padding: -10px;
+}
+
+img {
+    border: 3px solid #ddd;
+    border-radius:71px;
+    padding: 2px; /* this pads around the picture inside the box and makes it smaller as the number gets larger*/
+    max-width: 225px;
+    margin: 5px 40px 0px 50px;
+}
+aside {
+		margin:  -350px 0px 0px 1050px; 
+	
+}
+article {
+	margin:10px 550px 0px 0px; 
+	 padding: 2px; 
+}
+ul {
+	list-style-type: none;
+	
+}
+li {
+	margin:-20px 0px 0px 300px;
+	padding: 5px;
+	font-size: 55px;
+}
+
+footer {
+	color: #135A11;
+	margin: 85px 0px 0px 515px;
+	font-size: 20px;
+}
