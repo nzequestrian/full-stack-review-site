@@ -32,6 +32,14 @@
 	<p><a th:href="@{/breeds}">Back to list of breeds</a></p>
 </div>
 
+
+<p class="breedTags" th:each="tag : ${tags}">
+				<a th:href="@{/tags/} + ${tag.id}">
+					<span th:text="${tag.name}"></span>
+				</a>
+			</p>
+
+
 <footer> <small>Copyright www.bridleplates.com LLC 2018</small> </footer>
 	
 </body>

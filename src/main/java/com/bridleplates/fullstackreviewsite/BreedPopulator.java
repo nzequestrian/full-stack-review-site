@@ -11,9 +11,20 @@ public class BreedPopulator implements CommandLineRunner {
 	DisciplineRepository disciplineRepo;
 	@Autowired
 	BreedRepository breedRepo;
+	@Autowired
+	TagRepository tagRepo;
+//	@Autowired
+//	CommentRepository commentRepo;
 		
 	@Override
 	public void run(String... args) throws Exception {
+		
+		Tag huntingTack = tagRepo.save(new Tag("Hunt Seat Attire"));
+		Tag jumpingTack = tagRepo.save(new Tag("Jumping Attire"));
+		Tag dressageTack = tagRepo.save(new Tag("Dressage Attire"));
+		Tag eventingTack = tagRepo.save(new Tag("Eventing Attire"));
+		Tag drivingTack = tagRepo.save(new Tag("Driving Attire"));
+		Tag westernTack = tagRepo.save(new Tag("Western Attire"));
 		
 		Breed Thoroughbred = breedRepo.save(new Breed("Thoroughbred","The typical Thoroughbred stands just over 16 hands, and can be gray, bay, dark bay, roan, chestnut, white, buckskin, black, perlino, palomino, cremello, or brown in color. "
 				+ "Though primarily bred as a racehorse due to being fast, strong, and athletic. This breed features a long neck as well as a chiseled head with widely spaced eyes. These horses have deep shoulders, a short and evenly curved back, a strong and deep chest, "

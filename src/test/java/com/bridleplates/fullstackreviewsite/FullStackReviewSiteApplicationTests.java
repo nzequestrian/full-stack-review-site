@@ -101,9 +101,9 @@ public class FullStackReviewSiteApplicationTests {
 		discArray[0] = disc1;
 		discArray[1] = disc2;
 
-		Breed qHdiscs = breedRepo.save(new Breed("Warmblood", description, url, "Url2", "Url3", discArray));
+		//Breed qHdiscs = breedRepo.save(new Breed("Warmblood", description, url, "Url2", "Url3", discArray));
 
-		int discArrayLength = qHdiscs.getDisciplines().toArray().length;
+		int discArrayLength = 0;//qHdiscs.getDisciplines().toArray().length;
 
 		Assert.assertEquals(2, discArrayLength);
 	}

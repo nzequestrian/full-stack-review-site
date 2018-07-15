@@ -52,13 +52,18 @@
 <ul>
 	<li th:each="breed : ${breeds}"><a
 			th:href="|@{/breeds/}${breed.id}|"> <span
-				th:text="${breed.title}"></span>
+				th:text="${breed.title}">Name</span>
 	</a></li>
 </ul>
 
 <footer>
-		Copyright www.bridleplates.com LLC 2018
-	</footer>
+		
+	<ul>
+		<li>
+			<a th:href="@{/tags}">Browse by tag</a>
+		</li>
+	</ul>Copyright www.bridleplates.com LLC 2018
+</footer>
 
 </body>
 </html>
