@@ -4,7 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<title>Tags</title>
+     <link rel="stylesheet" type="text/css" media="all" 
+          href="../../../css/tags.css" th:href="@{/css/tags.css}" /><title>Tags</title>
 </head>
 <body>
 	<header>
@@ -17,9 +18,9 @@
 					<span th:text="${tag}"></span>
 			</a></li>
 
-			<form action="/tags" method="POST">
-				<label>New Tag: <input type="text" name="name" /></label> <input
-					type="submit" value="Submit" />
+			<form th:action="|@{/tag/}${name}|" method="POST">
+				<label>New Tag: <input type="text" name ="name"/></label> 
+				<input type="submit" value="Submit" />
 			</form>
 		</ul>
 		<ul class="api-tag"></ul>
@@ -29,6 +30,8 @@
 		<a class="breeds" th:href="@{/breeds}">Return to home page</a>
 		<p class="copyrightInfo">&copy; Bridleplates.com LLC</p>
 	</footer>
+	
+	<script src="/js/app.js"></script>
 
 </body>
 </html>

@@ -3,12 +3,13 @@ package com.bridleplates.fullstackreviewsite;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class TagController {
-	
+
 	@Autowired
 	private TagRepository tagRepo;
 
@@ -18,10 +19,11 @@ public class TagController {
 		return "tags";
 	}
 
-	@RequestMapping("/tag/{name}")
-	public String getTitleFromTag(@PathVariable(name = "name") String name, Model model) {
-		model.addAttribute("tag", tagRepo.findByName(name));
-		return "tag";
+	@RequestMapping(value = "/tag/{name}", method = RequestMethod.POST)
+	public String findOrPostTag(String name, Model model) {
+		System.out.println("Name: " + name);
+		model.addAttribute("tag", tagRepo.save(new Tag(name)));
+		return "tags";
 	}
 
 }

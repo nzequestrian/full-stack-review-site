@@ -19,12 +19,63 @@ public class BreedPopulator implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Tag huntingTack = tagRepo.save(new Tag("Hunt Seat Attire"));
-		Tag jumpingTack = tagRepo.save(new Tag("Jumping Attire"));
-		Tag dressageTack = tagRepo.save(new Tag("Dressage Attire"));
-		Tag eventingTack = tagRepo.save(new Tag("Eventing Attire"));
-		Tag drivingTack = tagRepo.save(new Tag("Driving Attire"));
-		Tag westernTack = tagRepo.save(new Tag("Western Attire"));
+		Tag huntingTack = tagRepo.save(new Tag("Hunt Seat Attire","","","","For the hunter ring, I am a traditionalist. This division "
+				+ "originated from the hunt field. Classic attire is timeless. I don’t like to see flashy, blingy, or the latest fad mar the "
+				+ "overall look of the horse and their performance. That means conservative colored hunt coats, beige breeches, beautifully "
+				+ "polished boots, traditional spurs, dark gloves and helmets without obvious adornments are a must. Navy and hunter green "
+				+ "(which are extremely popular at the moment) coats are always in vogue. For summer I don’t mind lighter shades of blues, "
+				+ "greys, browns and greens. Black is always okay, though a bit more formal in my opinion. Hair neatly contained in hairnets "
+				+ "tucked up under the helmets is important to the overall look of classic and traditional attire. I’m not crazy about the "
+				+ "excessive bows on the pony kids, especially if they cover the numbers and detract from the performance."));
+		Tag jumpingTack = tagRepo.save(new Tag("Jumping Attire", "","","","In the jumper ring, I totally understand that the European "
+				+ "influence has affected our sense of style dramatically over the past ten years. There is  every color and style of breeches"
+				+ " imaginable to mankind and with a variety of bling. The riding shirts are as dramatic as the hunt coats, if a rider chooses"
+				+ " to wear them. I realize fun and comfort are the key goals here, and as long as the requirements of the USEF rulebook are "
+				+ "met regarding collared shirts, then all is good. I must say I will never get used to the flying ponytails, regardless of "
+				+ "the famous European riders at the top of the sport that sport this style."));
+		Tag dressageTack = tagRepo.save(new Tag("Dressage Attire", "","","","Correct show attire for the dressage ring consists of "
+				+ "white or light colored riding pants, black boots, a white or light colored stock tie, light or dark colored gloves, "
+				+ "along with an appropriate helmet. In cases of extreme temperatures, the stewards may waive the jackets. So in this case, "
+				+ "you must wear a show shirt that consists of sleeves and a collar. From training level to 4th level, a dark colored short "
+				+ "coat is required, whereas as you move to the FEI levels you get to wear the much sought after tail coat. It is also mandatory "
+				+ "to wear spurs in the FEI levels. At all levels you may carry a whip that is no longer then 47.2 inches (except for championships,"
+				+ " where no whip is allowed). The riders hair must also be tied up in a bun or braid. Currently International competition"
+				+ " still allows the classical top hat instead of the helmet (which is mandatory in the lower levels) but many riders are now "
+				+ "wearing helmets at the International level."));
+		Tag eventingTack = tagRepo.save(new Tag("Eventing Attire", "","","","For cross country at a three day event, you are required "
+				+ "to wear the following: An SEI approved helmet. I recommend a skull cap as they are better for “rolling” and protecting "
+				+ "the neck. A hard shell vest, such as Tipperary. I highly recommend also using an air vest (Point Two or Hit Air) over top "
+				+ "of the hard shell vest. These are not required yet, but should be in my opinion. Tall boots, no half chaps! Field boot style"
+				+ " is best, as it allows more flexibility in ankle for comfort in shorter stirrup lengths. Medical Arm Band. Provides emergency "
+				+ "contacts as well as medical information such as allergies, blood type etc.Any color breeches/belt and shirt covering "
+				+ "shoulders. We also wear “pinneys” that we put our numbers in. They are worn like vests as well. In addition to the rider "
+				+ "wearing the number, the horse also has to wear one on the saddle pad or bridle. This is in-case we get “disconnected.”"));
+		Tag drivingTack = tagRepo.save(new Tag("Driving Attire", "","","","You want to be pleasingly coordinated. You need to carry a whip "
+				+ "and you need to wear an APRON and HAT and GLOVES the gloves can be any comfortable, slightly on the loose side, brown colored "
+				+ "gloves - riding gloves are fine the hat should not have a big floppy brim. It should fit snuggly so it wont blow off in the "
+				+ "ring or in on some thin ribbon ties or elastic to help there. Your hair should be tidy under the hat or bag it in a hairnet. "
+				+ "Can still be long (if that applies) just not flyaway the apron can just be a piece of fabric wrapped around you from just "
+				+ "above the waist to about the ankles. It should be wide enough to cover you bum. Again you can attach ribbons to tie it "
+				+ "on or a piece of Velcro to close it in the back get fabric with some weight to drape. You don't want the apron to be "
+				+ "blowing up while you are driving. For the rest of the outfit - if it is hot, a nice longsleeve blouse you can wear a vest "
+				+ "if you have or can find one slacks are fine under the apron. You will want something around you neck to draw a bit of "
+				+ "attention there. I used to have a nice collection of those long thin silk-like scarves. Make sure whatever you wear give you "
+				+ "freedom to move your arms and shoulders without bunching up the fabric. For picking colors You want people to say -"
+				+ " That looks really nice. You want to be noticed but in a good way. Don't go the way of funereal black - you will look "
+				+ "like the Victorian funeral. Don't go SOOOOO blendy that you fade into the background. You can choose to go with the pony colors "
+				+ "- like a haflinger going with light browns and golds or you can choose something that complements - like blue or green"
+				+ "Pick seasonal colors - you don't want to look like you are going to a fall race party (greens and rusts) in the middle "
+				+ "of the summer. But you really also don't want summer light colors in the fall"));
+		Tag westernTack = tagRepo.save(new Tag("Western Attire","WestTack.jpg","WestAttire.jpg","WestShow.jpg"," Western boots are usually worn for all ages and classes in the "
+				+ "western show ring. They usually come up to mid-calf in length and have a pointed toe. Western boots can be seen in many different "
+				+ "colors and designs.There are two different types of Western show shirts, Simple and flashy! Men often wear the simple, button up "
+				+ "blouses when showing and the women are often seen in the flashy show shirts. Western cowgirls are all about the glam look! "
+				+ "The colorful, glittery show shirts can be seen for the western pleasure classes, as well as the speed events! These show "
+				+ "shirts consist of brightly colored fabric, with rhinestones and sequins all throughout the shirt. jeans are most often the "
+				+ "type of pants that are worn in the ring. Jeans are to be nice and clean and can often be paired with a pair of riding chaps "
+				+ "for the western pleasure classes. a cowboy hat is a requirement for all advanced classes. "
+				+ "Your hat has to be tight enough that it doesn’t come off your head and it is usually seen in the colors black, brown, or tan. "
+				+ "In some instances if your hat comes off while in the show ring, points are deducted from your overall scoring."));
 		
 		Breed Thoroughbred = breedRepo.save(new Breed("Thoroughbred","The typical Thoroughbred stands just over 16 hands, and can be gray, bay, dark bay, roan, chestnut, white, buckskin, black, perlino, palomino, cremello, or brown in color. "
 				+ "Though primarily bred as a racehorse due to being fast, strong, and athletic. This breed features a long neck as well as a chiseled head with widely spaced eyes. These horses have deep shoulders, a short and evenly curved back, a strong and deep chest, "
