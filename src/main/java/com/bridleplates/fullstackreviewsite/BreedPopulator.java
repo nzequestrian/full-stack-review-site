@@ -204,7 +204,7 @@ public class BreedPopulator implements CommandLineRunner {
 		Breed[] eventingTackBreeds = new Breed[] { Thoroughbred, Warmblood };
 		Breed[] drivingTackBreeds = new Breed[] { Mini, BudweiserHorse };
 
-		Tag huntingTack = tagRepo.save(new Tag("Hunt Seat Attire", "", "", "",
+		Tag huntingTack = tagRepo.save(new Tag("Hunt Seat Attire", "HuntSeatAttire.jpg", "Hunter-Good Bascule.jpg", "huntSaddleSeatAttire.jpg",
 				"For the hunter ring, I am a traditionalist. This division "
 						+ "originated from the hunt field. Classic attire is timeless. I don’t like to see flashy, blingy, or the latest fad mar the "
 						+ "overall look of the horse and their performance. That means conservative colored hunt coats, beige breeches, beautifully "
@@ -214,7 +214,7 @@ public class BreedPopulator implements CommandLineRunner {
 						+ "tucked up under the helmets is important to the overall look of classic and traditional attire. I’m not crazy about the "
 						+ "excessive bows on the pony kids, especially if they cover the numbers and detract from the performance.",
 				huntingTackBreeds));
-		Tag jumpingTack = tagRepo.save(new Tag("Jumping Attire", "", "", "",
+		Tag jumpingTack = tagRepo.save(new Tag("Jumping Attire", "sj2Attire.JPG", "sj3att.jpg", "SJAttire.jpg",
 				"In the jumper ring, I totally understand that the European "
 						+ "influence has affected our sense of style dramatically over the past ten years. There is  every color and style of breeches"
 						+ " imaginable to mankind and with a variety of bling. The riding shirts are as dramatic as the hunt coats, if a rider chooses"
@@ -222,7 +222,7 @@ public class BreedPopulator implements CommandLineRunner {
 						+ "met regarding collared shirts, then all is good. I must say I will never get used to the flying ponytails, regardless of "
 						+ "the famous European riders at the top of the sport that sport this style.",
 				jumpingTackBreeds));
-		Tag dressageTack = tagRepo.save(new Tag("Dressage Attire", "", "", "",
+		Tag dressageTack = tagRepo.save(new Tag("Dressage Attire", "dre3att.jpeg", "dr2att.jpg", "dreatt.jpg",
 				"Correct show attire for the dressage ring consists of "
 						+ "white or light colored riding pants, black boots, a white or light colored stock tie, light or dark colored gloves, "
 						+ "along with an appropriate helmet. In cases of extreme temperatures, the stewards may waive the jackets. So in this case, "
@@ -233,7 +233,7 @@ public class BreedPopulator implements CommandLineRunner {
 						+ " still allows the classical top hat instead of the helmet (which is mandatory in the lower levels) but many riders are now "
 						+ "wearing helmets at the International level.",
 				dressageTackBreeds));
-		Tag eventingTack = tagRepo.save(new Tag("Eventing Attire", "", "", "",
+		Tag eventingTack = tagRepo.save(new Tag("Eventing Attire", "ev1att.jpg", "ev2att.jpg", "eve3att.jpg",
 				"For cross country at a three day event, you are required "
 						+ "to wear the following: An SEI approved helmet. I recommend a skull cap as they are better for “rolling” and protecting "
 						+ "the neck. A hard shell vest, such as Tipperary. I highly recommend also using an air vest (Point Two or Hit Air) over top "
@@ -243,7 +243,7 @@ public class BreedPopulator implements CommandLineRunner {
 						+ "shoulders. We also wear “pinneys” that we put our numbers in. They are worn like vests as well. In addition to the rider "
 						+ "wearing the number, the horse also has to wear one on the saddle pad or bridle. This is in-case we get “disconnected.”",
 				eventingTackBreeds));
-		Tag drivingTack = tagRepo.save(new Tag("Driving Attire", "", "", "",
+		Tag drivingTack = tagRepo.save(new Tag("Driving Attire", "dr1att.jpg", "dr24a.jpg", "dr2att.jpg",
 				"You want to be pleasingly coordinated. You need to carry a whip "
 						+ "and you need to wear an APRON and HAT and GLOVES the gloves can be any comfortable, slightly on the loose side, brown colored "
 						+ "gloves - riding gloves are fine the hat should not have a big floppy brim. It should fit snuggly so it wont blow off in the "

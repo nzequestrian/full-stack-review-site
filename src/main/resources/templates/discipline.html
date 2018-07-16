@@ -12,11 +12,9 @@
 <body>
 
 
-<ul>
-	  <li th:each="discipline: ${discipline}"> 	    
+<span th:each="discipline: ${discipline}">  </span>    
 	   	 	<span th:text="${discipline.title}"></span>
-    	</li>
-	</ul>
+    	
 	   	 	
 			 <div><img th:src="|/images/${discipline.imgUrl2}" />
 			 <img th:src="|/images/${discipline.imgUrl}" />
@@ -25,12 +23,13 @@
 
 <article th:text="${discipline.description}"></article>
 
-		<div class="discipline">
+		
+		<aside class="discipline">
 		<ul>
 					<li th:each="comment:${discipline.comments}">
 					<h6 th:text="${comment.comment}"></h6></li>
 			</ul>
-		</div>
+		</aside>
 		
 		<form th:action="|@{/discipline/}${discipline.id}|" method="POST">
 				<h2>Add Comment: </h2> 
@@ -40,6 +39,7 @@
 <div>
 	<p><a th:href="@{/disciplines}">Back to list of disciplines</a></p>
 	<p><a th:href="@{/breeds}">Back to list of breeds</a></p>
+	<p> <a th:href="@{/tags}">Browse by tag</a></p>
 </div>
 
 <footer> <small>Copyright www.bridleplates.com LLC 2018</small> </footer>

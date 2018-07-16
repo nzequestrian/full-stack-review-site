@@ -86,11 +86,16 @@ a {text-decoration: none; }
 
 footer {
 	color: #135A11;
-	margin: -70px 0px 0px 350px;
+	margin: -20px 0px 0px 350px;
 	font-size: 20px;
 }
 
+p {
+	margin: -200px 0px 0px -175px;
+}
+aside {
 
+}
 
 
 
