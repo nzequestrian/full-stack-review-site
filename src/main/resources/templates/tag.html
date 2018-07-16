@@ -20,6 +20,12 @@
 			 <img th:src="|/images/${tag.imgUrl}" />
 			 <img th:src="|/images/${tag.imgUrl3}" />
 		</div>
+		<div class="breed">
+		<ul>
+					<li th:each="breed: ${tag.breeds}">
+					<span th:text="${breed.title}"></span></li>
+			</ul>
+		</div>
 
 
     <footer>

@@ -19,7 +19,24 @@
 			</a></li>
 
 			<form th:action="|@{/tag/}${name}|" method="POST">
-				<label>New Tag: <input type="text" name ="name"/></label> 
+				<h2>Add Attire: </h2> 
+				<input type="text" name ="name"/>
+				 <h2>Description of Attire: </h2>
+				<input type="text" name ="description"/>
+				<br/>
+				<h2>Please choose pictures from local image directory only (example: /src/main/resources/static/images): </h2>
+				<input type="file" name="imgUrl" accept="*"/>
+				<input type="file" name="imgUrl2" accept="*"/>
+				<input type="file" name="imgUrl3" accept="*"/>
+				<h2>Select breeds associated with Attire: </h2>
+				<select class="form-control" name="breeds" multiple="multiple">
+    					<option th:each="breed : ${breeds}" 
+    							th:selected = "${breeds.contains(breed)}"
+    							th:value="${breed.id}" 
+    							th:text="${breed.title}" >
+    					</option>
+ 				</select><br/>
+
 				<input type="submit" value="Submit" />
 			</form>
 		</ul>

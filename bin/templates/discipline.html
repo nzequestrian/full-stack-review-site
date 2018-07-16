@@ -25,7 +25,18 @@
 
 <article th:text="${discipline.description}"></article>
 
-
+		<div class="discipline">
+		<ul>
+					<li th:each="comment:${discipline.comments}">
+					<h6 th:text="${comment.comment}"></h6></li>
+			</ul>
+		</div>
+		
+		<form th:action="|@{/discipline/}${discipline.id}|" method="POST">
+				<h2>Add Comment: </h2> 
+				<input type="text" name ="comment"/>
+				<input type="submit" value="Submit" />
+			</form>
 <div>
 	<p><a th:href="@{/disciplines}">Back to list of disciplines</a></p>
 	<p><a th:href="@{/breeds}">Back to list of breeds</a></p>

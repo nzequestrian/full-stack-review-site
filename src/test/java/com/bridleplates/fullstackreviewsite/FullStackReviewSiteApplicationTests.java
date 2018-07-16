@@ -29,7 +29,7 @@ public class FullStackReviewSiteApplicationTests {
 		Breed Warmblood = breedRepo.save(new Breed("Warmblood",
 				"A Warmblood is a horse with at least 5 generations of recognized sport horse bloodlines and that has been inspected and registered by world-recognized breeding associations to excel in the sports of dressage and/or show jumping. The warm blooded breeds were the result of breeding large cold blood draft horses of northern Europe such as Clydesdales and Percherons with hot blooded, lighter and faster Arabian horses that warriors captured in the Middle East and Africa during the Middle Ages.",
 				"Url", "Url2", "Url3"));
-		Discipline QhWestern = disciplineRepo.save(new Discipline("Title", " ", " ", " ", " ", Warmblood));
+		Discipline QhWestern = disciplineRepo.save(new Discipline("Title", " ", " ", " ", " "));
 		Assert.assertNotNull(QhWestern);
 	}
 
@@ -46,7 +46,7 @@ public class FullStackReviewSiteApplicationTests {
 		Breed Warmblood = breedRepo.save(new Breed("Warmblood",
 				"A Warmblood is a horse with at least 5 generations of recognized sport horse bloodlines and that has been inspected and registered by world-recognized breeding associations to excel in the sports of dressage and/or show jumping. The warm blooded breeds were the result of breeding large cold blood draft horses of northern Europe such as Clydesdales and Percherons with hot blooded, lighter and faster Arabian horses that warriors captured in the Middle East and Africa during the Middle Ages.",
 				"Url", "Url2", "Url3"));
-		Discipline QhWestern = disciplineRepo.save(new Discipline("Title", " ", " ", " ", " ", Warmblood));
+		Discipline QhWestern = disciplineRepo.save(new Discipline("Title", " ", " ", " ", " "));
 		Assert.assertEquals("Title", QhWestern.getTitle());
 	}
 
@@ -63,7 +63,7 @@ public class FullStackReviewSiteApplicationTests {
 		Breed Warmblood = breedRepo.save(new Breed("Warmblood",
 				"A Warmblood is a horse with at least 5 generations of recognized sport horse bloodlines and that has been inspected and registered by world-recognized breeding associations to excel in the sports of dressage and/or show jumping. The warm blooded breeds were the result of breeding large cold blood draft horses of northern Europe such as Clydesdales and Percherons with hot blooded, lighter and faster Arabian horses that warriors captured in the Middle East and Africa during the Middle Ages.",
 				"Url", "Url2", "Url3"));
-		Discipline QhWestern = disciplineRepo.save(new Discipline("Title", description, " ", " ", " ", Warmblood));
+		Discipline QhWestern = disciplineRepo.save(new Discipline("Title", description, " ", " ", " "));
 		Assert.assertEquals(description, QhWestern.getDescription());
 	}
 
@@ -82,7 +82,7 @@ public class FullStackReviewSiteApplicationTests {
 		Breed Warmblood = breedRepo.save(new Breed("Warmblood",
 				"A Warmblood is a horse with at least 5 generations of recognized sport horse bloodlines and that has been inspected and registered by world-recognized breeding associations to excel in the sports of dressage and/or show jumping. The warm blooded breeds were the result of breeding large cold blood draft horses of northern Europe such as Clydesdales and Percherons with hot blooded, lighter and faster Arabian horses that warriors captured in the Middle East and Africa during the Middle Ages.",
 				"Url", "Url2", "Url3"));
-		Discipline QhWestern = disciplineRepo.save(new Discipline("Title", description, url, " ", " ", Warmblood));
+		Discipline QhWestern = disciplineRepo.save(new Discipline("Title", description, url, " ", " "));
 		Assert.assertEquals(url, QhWestern.getImgUrl());
 	}
 
@@ -94,8 +94,8 @@ public class FullStackReviewSiteApplicationTests {
 		Breed qH1 = new Breed("QH1", description, url, "Url2", "Url3");
 		Breed qH2 = new Breed("QH2", description, url, "Url2", "Url3");
 
-		Discipline disc1 = new Discipline("Title1", description, url, " ", " ", qH1);
-		Discipline disc2 = new Discipline("Title2", description, url, " ", " ", qH2);
+		Discipline disc1 = new Discipline("Title1", description, url, " ", " ");
+		Discipline disc2 = new Discipline("Title2", description, url, " ", " ");
 
 		Discipline[] discArray = new Discipline[2];
 		discArray[0] = disc1;

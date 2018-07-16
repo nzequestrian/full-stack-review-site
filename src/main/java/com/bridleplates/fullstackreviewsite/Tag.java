@@ -1,5 +1,6 @@
 package com.bridleplates.fullstackreviewsite;
 
+import java.util.Arrays;
 import java.util.Collection;
 
 import javax.persistence.Entity;
@@ -23,23 +24,25 @@ public class Tag {
 	@Lob
 	private String description;
 	
-	@ManyToMany (mappedBy="tags")
-	private Collection <Breed> breeds;
-
-	protected Tag () {}
+	@ManyToMany
+	private Collection<Breed> breeds;
+	
+	
+	public Tag () {}
 	
 	public Tag(String name) {
 		this.name = name;		
 	}
 
 	
-	public Tag(String name, String imgUrl, String imgUrl2, String imgUrl3, String description
+	public Tag(String name, String imgUrl, String imgUrl2, String imgUrl3, String description, Breed... breeds
 			) {
 		this.name = name;
 		this.imgUrl = imgUrl;
 		this.imgUrl2 = imgUrl2;
 		this.imgUrl3 = imgUrl3;
 		this.description = description;
+		this.breeds = Arrays.asList(breeds);
 		
 	}
 
