@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -20,19 +21,27 @@ public class Breed {
 	private String imgUrl3;
 	@Lob
 	private String descript;
+	
+	@ManyToMany
+	private Collection<Tag> tags;
 
 	@OneToMany (mappedBy = "breed")
-	Collection<Discipline> disciplines;
-
+	private Collection<Discipline> disciplines;	
+	
+	/*@ElementCollection
+	@Embedded 
+	private Collection<Comment> comments; */ // I just added this ************************************************
+	
 	public Breed () {}
 	
-	public Breed(String title, String descript, String imgUrl, String imgUrl2, String imgUrl3, Discipline... disciplines) {
+	public Breed(String title, String descript, String imgUrl, String imgUrl2, String imgUrl3, Tag... tags) {
 		this.title = title;
 		this.descript = descript;
 		this.imgUrl = imgUrl;
 		this.imgUrl2 = imgUrl2;
 		this.imgUrl3 = imgUrl3;
-		this.disciplines = Arrays.asList(disciplines);
+		//this.disciplines = Arrays.asList(disciplines);
+		this.tags = Arrays.asList(tags);
 	}
 
 	public Long getId() {
@@ -61,6 +70,10 @@ public class Breed {
 
 	public String getDescript() {
 		return descript;
+	}
+	
+	public Collection<Tag> getTags() {
+		return tags;
 	}
 
 	@Override

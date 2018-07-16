@@ -10,26 +10,25 @@ import javax.persistence.ManyToOne;
 public class Discipline {
 	@ManyToOne
 	private Breed breed;
-	
 
-	@ManyToOne 
-	private Discipline discipline; 	
-	
+	@ManyToOne
+	private Discipline discipline;
+
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+
 	private String title;
 	private String imgUrl;
 	private String imgUrl2;
 	private String imgUrl3;
 	@Lob
 	private String description;
-	
 
-	public Discipline () {
+	public Discipline() {
 
 	}
+
 	// JPA generates the id in the constructor
 	public Discipline(String title, String description, String imgUrl, String imgUrl2, String imgUrl3, Breed breed) {
 		this.title = title;
@@ -41,10 +40,10 @@ public class Discipline {
 
 	}
 
-	
 	public Long getId() {
 		return id;
 	}
+
 	public String getTitle() {
 		return title;
 	}
@@ -64,6 +63,7 @@ public class Discipline {
 	public String getImgUrl3() {
 		return imgUrl3;
 	}
+
 	@Override
 	public String toString() {
 		return "Discipline [breed=" + breed + ", id=" + id + ", title=" + title + ", imgUrl=" + imgUrl + ", imgUrl2="
