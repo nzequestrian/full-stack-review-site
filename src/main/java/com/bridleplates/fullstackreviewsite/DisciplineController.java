@@ -55,4 +55,5 @@ public class DisciplineController {
 		model.addAttribute("discipline", discRepo.findOne(id));
 		return "discipline";		
 	}
+	
 }
