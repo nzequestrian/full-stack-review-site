@@ -1,27 +1,38 @@
-//package com.bridleplates.fullstackreviewsite;
-//
-//import javax.persistence.Embeddable;
-//
-//@Embeddable
-//public class Comment {
-//	private String commentText;
-//
-//	public Comment() {
-//	}
-//
-//	public Comment(String commentText) {
-//		this.commentText = commentText;
-//	}
-//
-//	public String getCommentText() {
-//		return commentText;
-//	}
-//
-//	@Override
-//	public String toString() {
-//		return "Comment [commentText=" + commentText + "]";
-//	}
-//
-//}
+package com.bridleplates.fullstackreviewsite;
 
-// I just added ALL this ************************************************************
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+
+@Entity
+public class Comment {
+
+	@Id
+	@GeneratedValue
+	private Long Id;
+
+	@Lob
+	private String comment;
+
+	public Comment() {
+	}
+
+	public Comment(String comment) {
+		this.comment = comment;
+	}
+
+	public Long getId() {
+		return Id;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	@Override
+	public String toString() {
+		return comment;
+	}
+
+}

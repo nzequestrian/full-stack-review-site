@@ -24,13 +24,6 @@ public class Breed {
 	
 	@ManyToMany
 	private Collection<Tag> tags;
-
-	@OneToMany (mappedBy = "breed")
-	private Collection<Discipline> disciplines;	
-	
-	/*@ElementCollection
-	@Embedded 
-	private Collection<Comment> comments; */ // I just added this ************************************************
 	
 	public Breed () {}
 	
@@ -40,7 +33,6 @@ public class Breed {
 		this.imgUrl = imgUrl;
 		this.imgUrl2 = imgUrl2;
 		this.imgUrl3 = imgUrl3;
-		//this.disciplines = Arrays.asList(disciplines);
 		this.tags = Arrays.asList(tags);
 	}
 
@@ -50,10 +42,6 @@ public class Breed {
 
 	public String getTitle() {
 		return title;
-	}
-
-	public Collection<Discipline> getDisciplines() {
-		return disciplines;
 	}
 	
 	public String getImgUrl() {
@@ -80,6 +68,4 @@ public class Breed {
 	public String toString() {
 		return title + ", " + descript;
 	}
-
-	
 }

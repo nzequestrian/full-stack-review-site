@@ -20,11 +20,19 @@
 			 <img th:src="|/images/${tag.imgUrl}" />
 			 <img th:src="|/images/${tag.imgUrl3}" />
 		</div>
+		<div class="breed">
+		<ul><h2> Tags : </h2>
+					<li th:each="breed: ${tag.breeds}">
+					<span th:text="${breed.title}"></span></li>
+			</ul>
+		</div>
 
 
     <footer>
         <a class="Breeds" th:href="@{/breeds}">Return to home page</a>
+        <p> <a th:href="@{/tags}">Browse by tag</a></p>
         <p class="copyrightInfo">&copy; Bridleplates.com</p>
     </footer>
+    <script src="/js/app.js"></script>
 </body>
 </html>

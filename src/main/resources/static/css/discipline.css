@@ -10,15 +10,19 @@ body {
    background-image: url("../images/pasture2.jpg");
    background-repeat: no-repeat;
    background-size: 100%;
-   font-size: 16px;
+   font-size: 12px;
 }
 img {
     border: 6px solid #ddd;
     border-radius: 30px;
     padding: 1px; /* this pads around the picture inside the box and makes it smaller as the number gets larger*/
-    max-width: 225px;
-    margin: 50px 50px 50px 125px;
+    max-width: 175px;
+    margin: 20px 50px 50px 150px;
    
+
+}
+form {
+	margin:	-120px 0px -10px 500px;
 }
  
 ul {
@@ -26,14 +30,26 @@ ul {
 	
 }
 li {
-	margin:-40px 0px 0px 400px;
-	padding: 5px;
-	font-size: 55px;
+	margin:-10px 0px 0px 400px;
+	padding: 0px;
+	font-size: 10px;
 }  
- text {
+h6 {
+	font-size: 12px;
+
+
+
  
  }
  aside{
- 	margin:0px 0px 0px 600px;
+ 	margin:0px 0px 0px 400px;
  }   
+ 
+ span {
+ font-size: 45px;
+margin:0px 20px 0px 200px;
+
+ 
+ }
+ 
  
